@@ -1,7 +1,6 @@
 import { ProductType } from "../Product/types";
 import { ProductComponent } from "../Product/component";
 import './styles.css';
-// import { BanknoteCounter } from "../BanknoteCounter";
 import { DepositedBanknotesComponent } from "../DepositedBanknotesComponent/component";
 
 type VendingMachineProps = {
