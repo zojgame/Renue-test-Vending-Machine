@@ -1,0 +1,1 @@
+export { VedingMachineInventory } from './components/VedingMachineInventory/component';

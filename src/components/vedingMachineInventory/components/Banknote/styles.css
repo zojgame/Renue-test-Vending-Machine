@@ -1,0 +1,22 @@
+.banknote{
+    background: greenyellow;
+    width: 10vw;
+    padding: 1vh 1vw;      
+}
+
+.banknote-container {
+    display: flex;
+    color: black;
+    font-size: large;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.banknote-count{
+    width: 2vw;
+    height: 2vw;
+    padding: 1vh 1vw;
+    background: black;
+    color: white;
+    border-radius: 10px;
+}

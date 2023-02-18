@@ -1,0 +1,21 @@
+.popup-message{
+    background: rgba(218, 165, 32, 0.466);
+    color: white;
+    border: 1px solid black;
+    position: absolute;
+    left: 60%;
+    padding: 2vh 2vw;
+    border-radius: 5px;
+    animation: popup-message 1s ease-in-out forwards;
+}
+
+@keyframes popup-message{
+    from{
+        top: 20%;
+        opacity: 0;
+    }
+    to{
+        top: 5%;
+        opacity: 1;
+    }
+}

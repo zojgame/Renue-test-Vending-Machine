@@ -1,0 +1,1 @@
+export { PopupMessage } from './components/PopupMessageUI/components';

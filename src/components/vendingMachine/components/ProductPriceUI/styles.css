@@ -1,0 +1,19 @@
+.product-price{
+    position: absolute;
+    width: 5vw;
+    margin-left: 3vw;
+    background-color: #f6ff009e;
+    border-radius: 5px;
+    animation: product-price 1s ease-in-out;
+}
+
+@keyframes product-price{
+    0%{
+        opacity: 0;
+        transform: translate(0, 25px);
+    }
+    100%{
+        opacity: 100;
+        transform: translate(0, 0);
+    }
+}

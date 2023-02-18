@@ -1,0 +1,13 @@
+.vending-machine{
+    display: flex;
+    width: 25vw;
+    flex-wrap: wrap;
+    border: 2px solid white;
+    align-items: center;
+}
+
+.vending-machine-container{
+    width: 25.5vw;
+    justify-content: center;
+    align-items: center;
+}

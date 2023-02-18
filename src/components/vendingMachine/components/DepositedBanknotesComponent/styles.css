@@ -1,0 +1,17 @@
+.banknote-counter-container{
+    background: grey;
+    margin-bottom: 1vh;
+    padding: 1% ;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-weight: bold;
+}
+
+.banknote-counter{
+    padding: 1%;
+    border-radius: 5px;
+    background-color: white;
+    color: black;
+    min-width: 5vw;
+}

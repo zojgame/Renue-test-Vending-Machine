@@ -1,0 +1,43 @@
+.product-item{
+    width: 30%;
+    height: 30%;
+    border: 5px solid white;
+    flex: 1 1 auto;
+    margin: 0.5vw;
+    font-size: 1vw;
+    color: black;
+    font-weight: bold;
+    box-sizing: border-box;
+    cursor: pointer;
+    background: white; 
+}
+
+.product-image{
+    width: 25%;
+    height: 25%;
+}
+
+.product-image:hover{
+    animation: product-image 0.5s ease-in-out forwards;
+}
+
+.product-count-container{
+    background: greenyellow;
+    margin: 1vh auto;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 2vw;
+}
+
+.product-empty{
+    background: red;
+}
+
+@keyframes product-image{
+    0%{
+        transform: scale(1);
+    }    
+    100%{
+        transform: scale(1.05);
+    }
+}

@@ -1,0 +1,11 @@
+.vending-machine-inventory{
+    background: white;
+    width: 20vw;
+    height: 70vh;
+    color: black;
+    font-weight: bold;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-around;
+}

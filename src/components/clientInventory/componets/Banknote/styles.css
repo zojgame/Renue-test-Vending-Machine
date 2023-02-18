@@ -1,0 +1,37 @@
+.client-banknote{
+    background: greenyellow;
+    width: 10vw;
+    padding: 1vh 1vw;      
+}
+
+.client-banknote:hover{
+    animation: banknote 1s ease-in-out forwards;  
+    cursor: pointer;
+}
+
+.client-banknote-container {
+    display: flex;
+    color: black;
+    font-size: large;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.client-banknote-count{
+    width: 2vw;
+    height: 2vw;
+
+    padding: 1vh 1vw;
+    background: black;
+    color: white;
+    border-radius: 10px;
+}
+
+@keyframes banknote{
+    from{
+        transform: scale(1);
+    }
+    to{
+        transform: scale(1.05);
+    }
+}
