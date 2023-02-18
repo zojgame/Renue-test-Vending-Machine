@@ -65,6 +65,9 @@ function CalculateChange(money : number) : BanknoteType[]{
             && vendingMachineBanknotes.oneCount > (banknotesCount.get(1) ?? 0)){
             currentNominal = 1
         }
+        else{
+            break;
+        }
 
         const banknoteCount = (banknotesCount.get(currentNominal) ?? 0);
         banknotesCount.set(currentNominal, banknoteCount + 1);
