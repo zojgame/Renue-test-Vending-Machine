@@ -1,6 +1,6 @@
 import './styles.css';
 import BanknoteComponent from '../Banknote/component';
-import { ChangeButtonComponent } from '../ChangeButton/ChangeButton';
+import { ChangeButtonComponent } from '../ChangeButton/component';
 import { vendingMachineBanknotes } from '../../../../mock/banknotes';
 
 export const VedingMachineInventory = () => {       

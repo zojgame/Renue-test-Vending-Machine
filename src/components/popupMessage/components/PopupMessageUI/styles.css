@@ -1,4 +1,5 @@
 .popup-message{
+    display: inline;
     background: rgb(218, 165, 32);
     color: white;
     border: 1px solid black;
@@ -7,6 +8,7 @@
     padding: 2vh 2vw;
     border-radius: 5px;
     animation: popup-message 1s ease-in-out forwards;
+    max-width: 100px;
 }
 
 @keyframes popup-message{

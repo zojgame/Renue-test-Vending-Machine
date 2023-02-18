@@ -12,7 +12,7 @@ type ProductProps = {
 export const ProductComponent = ({product} : ProductProps):JSX.Element => {
     const [productCount, setProductCount] = useState(product.count);
     const [isDescriptionVisible, setIsDescriptionVisible] = useState(false);
-    const [message, setMessage] = useState('');
+    const [messagePopup, setMessagePopup] = useState('');
     const [purchasedProductsCount, setPurchasedProductsCount] = useState(1);
 
     const onClickHandler = () => {
@@ -20,7 +20,7 @@ export const ProductComponent = ({product} : ProductProps):JSX.Element => {
             setProductCount(prev => prev - 1);
             setPurchasedProductsCount(prev => prev + 1);
             depositedBanknotes.decrease(product.price); 
-            setMessage(`вы получили ${purchasedProductsCount} ${product.title}`);        
+            setMessagePopup(`вы получили ${purchasedProductsCount} ${product.title}`);        
         }
     }
 
@@ -30,7 +30,7 @@ export const ProductComponent = ({product} : ProductProps):JSX.Element => {
 
    return (
     <>
-        <PopupMessage message={message}/>
+        <PopupMessage message={messagePopup}/>
        <div className='product-item' onClick={onClickHandler} onMouseEnter={mouseHandler} onMouseLeave ={mouseHandler}>
             {isDescriptionVisible && <ProductPriceComponent price={product.price}/>}
             <p>{product.title}</p>

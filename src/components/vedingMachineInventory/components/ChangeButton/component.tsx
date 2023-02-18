@@ -5,21 +5,31 @@ import { Banknote } from '../../../../mock/consts';
 import { nanoid } from 'nanoid';
 import { clientBanknotes } from '../../../../store/clientBanknotes';
 import { vendingMachineBanknotes } from '../../../../store/vendingMachineBanknotes';
+import { PopupMessage } from '../../../popupMessage';
+import { useState } from 'react';
 
 
 export const ChangeButtonComponent = () => {
+const [popupMessage, setPopupMessage] = useState('');
+const [isPopupShowing, setIsPopupShowing] = useState(false);
+
     const handleOnClick = () => {
         const change = depositedBanknotes.giveChange();
         if(change > 0){
             const banknotesToChange = CalculateChange(change);
             clientBanknotes.recieve(banknotesToChange);
             vendingMachineBanknotes.decreaseBanknotes(banknotesToChange);
+            setPopupMessage(ConvertBanknoteToString(banknotesToChange))
+            setIsPopupShowing(prev => !prev);
         }
     }
    return (
-       <div className="change-button" onClick={handleOnClick}>
-            Выдать сдачу
-       </div>
+        <>
+            <PopupMessage message={popupMessage} isPopupShowing={isPopupShowing}/>
+            <div className="change-button" onClick={handleOnClick}>
+                    Выдать сдачу
+            </div>    
+        </>
    );
 };
 
@@ -93,4 +103,12 @@ function GetNominal(money : number) : Banknote {
     }
 
     return Banknote.One;
+}
+
+function ConvertBanknoteToString(banknotes : BanknoteType[]){
+    const result = ('Вам выдано: \n').concat(banknotes.reduce((prevValue, currValue) => {
+        return prevValue + `${currValue.count}₽ - ${currValue.value} `
+    }, ''));
+
+    return result;
 }
