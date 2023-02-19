@@ -5,10 +5,11 @@ import { products } from '../mock/products';
 class Products {
     moneyToConvert : number = 0;
 
-    products : ProductType[] = products;
+    products : ProductType[] = [];
 
-    constructor(){
+    constructor(products : ProductType[]){
         makeAutoObservable(this);
+        this.products = products;
     }
 
     setMoneyToConvert(money : number){
@@ -16,17 +17,10 @@ class Products {
     }
 
     decreaseProductCount(product : ProductType){
-        // let productToUpdate = this.products.find((p) => p.id === product.id) as ProductType;
-        // // updatedProduct = {...updatedProduct, updatedProduct}
-        // // const updatedCount =  productToUpdate.count - 1;
-        // const updatedProduct : ProductType = { ...product, count: 1 }
-        // productToUpdate = updatedProduct;
         const currentProduct = this.products.filter((p) => p.id === product.id)[0];
-        const currentProductId = this.products.indexOf(currentProduct);
-
-        const updatedProduct : ProductType = {...currentProduct, count: 1};
-        this.products = [...this.products.slice(0, currentProductId), 
-            updatedProduct, ...this.products.slice(currentProductId + 1, this.products.length)];
+        const updatedProduct = { ...currentProduct, count: currentProduct.count - 1};
+        const updatedProducts = this.products.map(product => product.id === currentProduct.id ? updatedProduct : product);
+        this.products = updatedProducts;
     }
 
     giveChangeInProducts(productsToChange : Map<string, number>){
@@ -42,4 +36,4 @@ class Products {
     }
 }
 
-export const productItems = new Products();
+export const productItems = new Products(products);

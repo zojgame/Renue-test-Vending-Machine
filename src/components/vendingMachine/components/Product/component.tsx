@@ -20,8 +20,9 @@ export const ProductComponent = observer(({product} : ProductProps):JSX.Element 
 
     const onClickHandler = () => {
         if(productCount > 0 && product.price < depositedBanknotes.depositedBanknotes){
-            setProductCount(prev => prev - 1);
-            // productItems.decreaseProductCount(product);
+            // setProductCount(prev => prev - 1);
+            productItems.decreaseProductCount(product);
+
             setPurchasedProductsCount(prev => prev + 1);
             depositedBanknotes.decrease(product.price); 
             setMessagePopup(`вы получили ${purchasedProductsCount} ${product.title}`);        
@@ -38,7 +39,7 @@ export const ProductComponent = observer(({product} : ProductProps):JSX.Element 
        <div className='product-item' onClick={onClickHandler} onMouseEnter={mouseHandler} onMouseLeave ={mouseHandler}>
             {isDescriptionVisible && <ProductPriceComponent price={product.price}/>}
             <p>{product.title}</p>
-            <div className={`product-count-container ${productCount === 0 && 'product-empty'}`}>{productCount}</div>
+            <div className={`product-count-container ${product.count === 0 && 'product-empty'}`}>{product.count}</div>
             <img src={product.image} alt={product.title} className='product-image'/>
        </div>
     </>
