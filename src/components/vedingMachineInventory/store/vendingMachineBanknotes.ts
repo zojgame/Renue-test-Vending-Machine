@@ -1,6 +1,6 @@
 import { makeAutoObservable } from 'mobx';
-import { BanknoteType } from '../components/clientInventory';
-import { Banknote } from '../mock/consts';
+import { BanknoteType } from '../../clientInventory';
+import { Banknote } from '../../../mock/consts';
 
 class VendingMachineBanknotes {
     fiveHundredCount : number = Math.floor(Math.random() * 20);
@@ -85,5 +85,5 @@ class VendingMachineBanknotes {
     }
 
 }
-
+export type {VendingMachineBanknotes};
 export const vendingMachineBanknotes = new VendingMachineBanknotes();

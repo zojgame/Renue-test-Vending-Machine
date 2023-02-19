@@ -1,17 +1,18 @@
 import './styles.css';
-import { useState, useEffect, useLayoutEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 type PopupMessageProps = {
     message : string,
     isPopupShowing ?: boolean
 }
 
-export const PopupMessage = ({message, isPopupShowing} : PopupMessageProps) => {
+export const PopupMessage = ({ message, isPopupShowing } : PopupMessageProps) => {
     const [isPopupVisible, setIsPopupVisible] = useState(false);
     const isMessageEmpty = message !== '';
 
-    useEffect(() => {        
-        const popupDisappearTimer = setTimeout(() => setIsPopupVisible(false), 2000); 
+    useEffect(() => {     
+        // сообщение показывается 3 секунды, потом пропадает  
+        const popupDisappearTimer = setTimeout(() => setIsPopupVisible(false), 3000); 
 
             return () => {                
                 clearInterval(popupDisappearTimer);

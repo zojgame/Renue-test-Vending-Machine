@@ -1,0 +1,1 @@
+// export { MainPage as App } from '../App';

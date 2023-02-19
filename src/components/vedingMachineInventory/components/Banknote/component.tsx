@@ -1,6 +1,6 @@
 import './styles.css';
 import { BanknoteType } from '../../../clientInventory';
-import { vendingMachineBanknotes } from '../../../../store/vendingMachineBanknotes';
+import { vendingMachineBanknotes } from '../../store/vendingMachineBanknotes';
 import { observer } from 'mobx-react-lite';
 
 type BanknoteComponentProps = {
@@ -9,7 +9,6 @@ type BanknoteComponentProps = {
 
 const BanknoteComponent = observer(({banknote} : BanknoteComponentProps) => {
     const count = vendingMachineBanknotes.getCurrentBanknoteCount(banknote.denomination);
-
 
     return (
         <div className="banknote-container">

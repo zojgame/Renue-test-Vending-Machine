@@ -1,4 +1,4 @@
-import { depositedBanknotes } from "../../../../store/depositedBanknotes";
+import { depositedBanknotes } from "../../store/depositedBanknotes";
 import './styles.css';
 import { observer } from "mobx-react-lite";
 

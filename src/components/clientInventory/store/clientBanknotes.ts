@@ -1,6 +1,6 @@
 import { makeAutoObservable } from 'mobx';
-import { BanknoteType } from '../components/clientInventory';
-import { Banknote } from '../mock/consts';
+import { BanknoteType } from '..';
+import { Banknote } from '../../../mock/consts';
 
 class ClientBanknotes {
     oneThousandCount : number = Math.floor(Math.random() * 20);
