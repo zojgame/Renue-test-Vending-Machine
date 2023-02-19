@@ -4,7 +4,7 @@
     padding: 1vh 1vw;      
 }
 
-.banknote-container {
+.banknoteContainer {
     display: flex;
     color: black;
     font-size: large;
@@ -12,7 +12,7 @@
     justify-content: space-around;
 }
 
-.banknote-count{
+.banknoteCount{
     width: 2vw;
     height: 2vw;
     padding: 1vh 1vw;

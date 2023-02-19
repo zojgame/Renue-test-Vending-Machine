@@ -1,25 +1,24 @@
-.client-banknote{
+.clientBanknote{
     background: greenyellow;
     width: 10vw;
     padding: 1vh 1vw;      
 }
 
-.client-banknote:hover{
+.clientBanknote:hover{
     animation: banknote 1s ease-in-out forwards;  
     cursor: pointer;
 }
 
-.client-banknote-container {
+.clientBanknoteContainer {
     display: flex;
     color: black;
     font-size: large;
     align-items: center;
     justify-content: space-around;
-
-    
+    user-select: none;   
 }
 
-.client-banknote-count{
+.clientBanknoteCount{
     width: 2vw;
     height: 2vw;
 

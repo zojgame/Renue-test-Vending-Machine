@@ -1,4 +1,4 @@
-import './styles.css';
+import styles from './styles.module.css';
 import { depositedBanknotes } from '../../../vendingMachine/store/depositedBanknotes';
 import { clientBanknotes } from '../../../clientInventory/store/clientBanknotes';
 import { vendingMachineBanknotes } from '../../store/vendingMachineBanknotes';
@@ -44,7 +44,7 @@ let message = '';
                 // если продуктов нет, выводим сообщение,
                 // автомат сдачи не выдаёт
                 if(moneyToProduct.size === 0){
-                    setPopupMessage('Сожалем, но автомат сдачи не выдаёт');
+                    setPopupMessage('Сожалеем, но автомат сдачи не выдаёт');
                 }
                 else{
                     // если есть сообщение о сдаче купюрами, объединяем
@@ -68,7 +68,7 @@ let message = '';
    return (
         <>
             <PopupMessage message={popupMessage} isPopupShowing={isPopupShowing}/>
-            <div className="change-button" onClick={handleOnClick}>
+            <div className={styles.changeButton} onClick={handleOnClick}>
                 Выдать сдачу
             </div>    
         </>

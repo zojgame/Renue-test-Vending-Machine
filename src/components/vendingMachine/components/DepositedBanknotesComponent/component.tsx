@@ -1,12 +1,12 @@
 import { depositedBanknotes } from "../../store/depositedBanknotes";
-import './styles.css';
+import styles from './styles.module.css';
 import { observer } from "mobx-react-lite";
 
 export const DepositedBanknotesComponent = observer(() => {
    return (
-       <div className='banknote-counter-container'>
+       <div className={styles.banknoteCounterContainer}>
             <div>Внесенные купюры:</div>
-            <div className="banknote-counter">{depositedBanknotes.depositedBanknotes} 💰</div>
+            <div className={styles.banknoteCounter}>{depositedBanknotes.depositedBanknotes} 💰</div>
        </div>
    );
 });

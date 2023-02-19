@@ -1,4 +1,4 @@
-import './styles.css';
+import styles from './styles.module.css';
 import { BanknoteType } from '../../../clientInventory';
 import { vendingMachineBanknotes } from '../../store/vendingMachineBanknotes';
 import { observer } from 'mobx-react-lite';
@@ -11,11 +11,11 @@ const BanknoteComponent = observer(({banknote} : BanknoteComponentProps) => {
     const count = vendingMachineBanknotes.getCurrentBanknoteCount(banknote.denomination);
 
     return (
-        <div className="banknote-container">
-           <div className='banknote'>
+        <div className={styles.banknoteContainer}>
+           <div className={styles.banknote}>
                 { banknote.value } ₽
            </div>
-           <div className='banknote-count'>
+           <div className={styles.banknoteCount}>
                 { count }
            </div>
         </div>

@@ -3,8 +3,7 @@ import { BanknoteType } from '..';
 import { Banknote } from '../../../mock/consts';
 
 class ClientBanknotes {
-    // oneThousandCount : number = Math.floor(Math.random() * 20);
-    oneThousandCount : number = 1000;
+    oneThousandCount : number = Math.floor(Math.random() * 20);
     fiveHundredCount : number = Math.floor(Math.random() * 20);
     oneHundredCount : number = Math.floor(Math.random() * 20);
     fiftyCount : number = Math.floor(Math.random() * 20);

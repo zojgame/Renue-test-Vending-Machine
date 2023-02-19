@@ -1,13 +1,14 @@
-.change-button{
+.changeButton{
     padding: 1.5vh 0;
     background: red;
     width: 15vw;
     margin: 1vh auto;
     outline: 5px solid black;
     border-radius: 10px;
+    user-select: none;   
 }
 
-.change-button:hover{
+.changeButton:hover{
     cursor: pointer;
     color: white;
 }

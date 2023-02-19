@@ -1,6 +1,5 @@
-import { ProductType } from "../Product/types";
 import { ProductComponent } from "../Product/component";
-import './styles.css';
+import styles from './styles.module.css';
 import { DepositedBanknotesComponent } from "../DepositedBanknotesComponent/component";
 import { observer } from "mobx-react-lite";
 import { productItems } from "../../store/products";
@@ -11,9 +10,9 @@ export const VendingMachineComponent = observer(():JSX.Element => {
     .sort((prev, curr) => curr.price - prev.price);
 
    return (
-    <div className="vending-machine-container">
+    <div className={styles.vendingMachineContainer}>
         <DepositedBanknotesComponent />
-        <div className="vending-machine">
+        <div className={styles.vendingMachine}>
         {sortedProducts.map((product) => 
             <ProductComponent product={product} key={product.id}/>
         )}            

@@ -1,6 +1,6 @@
 import { ProductType } from "./types";
 import { useState } from "react";
-import './styles.css';
+import styles from './styles.module.css';
 import { ProductPriceComponent } from "../ProductPriceUI/component";
 import { depositedBanknotes } from "../../store/depositedBanknotes";
 import { PopupMessage } from "../../../popupMessage";
@@ -38,11 +38,11 @@ export const ProductComponent = observer(({product} : ProductProps):JSX.Element 
    return (
     <>
         <PopupMessage message={messagePopup}/>
-       <div className='product-item' onClick={onClickHandler} onMouseEnter={mouseHandler} onMouseLeave ={mouseHandler}>
+       <div className={styles.productItem} onClick={onClickHandler} onMouseEnter={mouseHandler} onMouseLeave ={mouseHandler}>
             {isDescriptionVisible && <ProductPriceComponent price={product.price}/>}
             <p>{product.title}</p>
-            <div className={`product-count-container ${product.count === 0 && 'product-empty'}`}>{product.count}</div>
-            <img src={product.image} alt={product.title} className='product-image'/>
+            <div className={`${styles.productCountContainer} ${product.count === 0 && `${styles.productEmpty}`}`}>{product.count}</div>
+            <img src={product.image} alt={product.title} className={styles.productImage}/>
        </div>
     </>
    );

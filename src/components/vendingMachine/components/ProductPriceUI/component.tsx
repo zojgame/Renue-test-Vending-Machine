@@ -1,4 +1,4 @@
-import './styles.css';
+import styles from './styles.module.css';
 
 type ProductPriceProps = {
     price: number
@@ -6,7 +6,7 @@ type ProductPriceProps = {
 
 export const ProductPriceComponent = ({price} : ProductPriceProps) => {
    return (
-       <div className="product-price">
+       <div className={styles.productPrice}>
             {price} ₽
        </div>
    );

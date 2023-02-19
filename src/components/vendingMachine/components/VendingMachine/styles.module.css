@@ -1,4 +1,4 @@
-.vending-machine{
+.vendingMachine{
     display: flex;
     width: 25vw;
     flex-wrap: wrap;
@@ -6,7 +6,7 @@
     align-items: center;
 }
 
-.vending-machine-container{
+.vendingMachineContainer{
     width: 25.5vw;
     justify-content: center;
     align-items: center;

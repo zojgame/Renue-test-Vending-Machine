@@ -1,4 +1,4 @@
-.product-item{
+.productItem{
     width: 30%;
     height: 30%;
     border: 5px solid white;
@@ -10,26 +10,29 @@
     box-sizing: border-box;
     cursor: pointer;
     background: white; 
+    user-select: none;
 }
 
-.product-image{
+.productImage{
     width: 25%;
-    height: 25%;
+    height: 25%;    
+    user-select: none;
 }
 
-.product-image:hover{
+.productImage:hover{
     animation: product-image 0.5s ease-in-out forwards;
 }
 
-.product-count-container{
+.productCountContainer{
     background: greenyellow;
     margin: 1vh auto;
     border: 1px solid black;
     border-radius: 5px;
     width: 2vw;
+    user-select: none;
 }
 
-.product-empty{
+.productEmpty{
     background: red;
 }
 
