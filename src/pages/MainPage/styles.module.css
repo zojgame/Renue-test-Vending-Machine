@@ -1,0 +1,5 @@
+.mainPage{
+    width: 80vw;
+    display: flex;
+    justify-content: space-around;
+  }

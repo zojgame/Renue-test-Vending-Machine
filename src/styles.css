@@ -28,8 +28,4 @@ body {
   min-height: 100vh;
 }
 
-.main-page{
-  width: 80vw;
-  display: flex;
-  justify-content: space-around;
-}
+

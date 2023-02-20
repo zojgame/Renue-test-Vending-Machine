@@ -1,4 +1,4 @@
-import { makeAutoObservable } from 'mobx';
+import { makeAutoObservable, runInAction } from 'mobx';
 import { ProductType } from '../components/Product/types';
 import { products } from '../../../mock/products';
 
@@ -13,19 +13,19 @@ class Products {
 
     // устанавливаем значение для конвертации
     setMoneyToConvert(money : number){
-        this.moneyToConvert = money;
+            this.moneyToConvert = money;
     }
 
     // уменьшение количество товара на 1
     decreaseProductCount(product : ProductType){
-        const currentProduct = this.products.filter((p) => p.id === product.id)[0];
-        const updatedProduct = { ...currentProduct, count: currentProduct.count - 1};
-        const updatedProducts = this.products.map(product => 
+            const currentProduct = this.products.filter((p) => p.id === product.id)[0];
+            const updatedProduct = { ...currentProduct, count: currentProduct.count - 1};
+            const updatedProducts = this.products.map(product => 
             product.id === currentProduct.id 
                 ? updatedProduct 
                 : product);
-
-        this.products = updatedProducts;
+                
+                this.products = updatedProducts;
     }
 
     // уменьшение количества товаров
@@ -41,7 +41,7 @@ class Products {
                     : product);
         })
 
-        this.products = updatedProductCounts;
+            this.products = updatedProductCounts;
     }
 }
 
