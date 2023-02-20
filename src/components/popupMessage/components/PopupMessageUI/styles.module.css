@@ -4,7 +4,7 @@
     color: white;
     border: 1px solid black;
     position: absolute;
-    left: 60%;
+    left: 65%;
     padding: 2vh 2vw;
     border-radius: 5px;
     animation: popup-message 1s ease-in-out forwards;

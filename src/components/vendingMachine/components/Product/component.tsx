@@ -20,7 +20,7 @@ export const ProductComponent = observer(({product} : ProductProps):JSX.Element 
     const productCount = product.count;
 
     const onClickHandler = () => {
-        if(productCount > 0 && product.price < depositedBanknotes.depositedBanknotes){
+        if(productCount > 0 && product.price <= depositedBanknotes.depositedBanknotes){
             
             //уменьшаем количество продукта на 1
             productItems.decreaseProductCount(product);           

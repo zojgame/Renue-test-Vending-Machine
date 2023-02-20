@@ -1,4 +1,4 @@
-import { makeAutoObservable, runInAction } from 'mobx';
+import { makeAutoObservable, configure } from 'mobx';
 import { ProductType } from '../components/Product/types';
 import { products } from '../../../mock/products';
 
@@ -44,5 +44,9 @@ class Products {
             this.products = updatedProductCounts;
     }
 }
+
+configure({
+    enforceActions: "never",
+})
 
 export const productItems = new Products(products);
